@@ -16,6 +16,7 @@ print("8")
 
 arvore.buscar(9)
 print("i")
+arvore.printre()
 
 
 

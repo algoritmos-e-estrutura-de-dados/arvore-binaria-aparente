@@ -27,7 +27,7 @@ class BinaryTree:
             root.esq = node 
         if value > atual.value:
           # cresce para direita 
-          autal = atual.dir
+          atual = atual.dir
           if atual == None:
             # coloca no na direita
             root.dir = node
@@ -47,3 +47,24 @@ class BinaryTree:
       if atual == None:
         return None
       return atual
+
+
+      
+  def printre(self,root):
+    root = self.root
+    if root ==None:
+      pass
+    else:
+      self.printre(root.esq)
+      print("(",root.value,")")
+      self.printre(root.dir)
+
+
+  # def printtree(self, value):
+  #   atual = None  
+  #   root = self.root 
+      
+      
+  #   # self.printtree(atual.esq)
+  #   # print(atual.item,end=" ")
+  #   # self.printtree(atual.dir)
