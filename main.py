@@ -1,8 +1,30 @@
 from binary_tree import BinaryTree
 
-tree1 = BinaryTree()
+arvore = BinaryTree()
 
-tree1.adicionar(4)
-tree1.adicionar(6)
-tree1.adicionar(3)
-print(tree1)
+arvore.adicionar(9)
+print("9")
+arvore.adicionar(2)
+arvore.adicionar(6)
+arvore.adicionar(3)
+print("0")
+arvore.adicionar(8)
+arvore.adicionar(1)
+arvore.adicionar(3)
+
+print("8")
+
+# arvore.search(9)
+# arvore.TreePrinter()
+
+
+# print("")
+
+
+# arvore.remove(9)
+# arvore.TreePrinter()
+
+# print("")
+
+# arvore.remove(6)
+# arvore.TreePrinter()
