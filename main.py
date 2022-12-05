@@ -2,20 +2,21 @@ from binary_tree import BinaryTree
 
 arvore = BinaryTree()
 
-arvore.adicionar(9)
-print("9")
 arvore.adicionar(2)
-arvore.adicionar(6)
-arvore.adicionar(3)
-print("0")
-arvore.adicionar(8)
+print("9")
+arvore.adicionar(4)
+arvore.adicionar(7)
 arvore.adicionar(1)
-arvore.adicionar(3)
+print("0")
+arvore.adicionar(6)
+arvore.adicionar(9)
+arvore.adicionar(5)
 
 print("8")
 
-# arvore.search(9)
-# arvore.TreePrinter()
+arvore.buscar(9)
+print("i")
+
 
 
 # print("")

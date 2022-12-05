@@ -11,12 +11,13 @@ class BinaryTree:
     node = Node(value,None,None)
     atual = None
     root = self.root
+    i = None
     # Raiz
     if self.root == None:
       self.root = node
     else:#quando não for raiz 
       atual = root#ponteiro valor atual 
-      while root :
+      while i :
         atual = root 
         # crescer para esquerda
         if value < atual.value:
@@ -24,54 +25,25 @@ class BinaryTree:
           # coloca no na esquerda 
           if atual  == None:
             root.esq = node 
-        else:
+        if value > atual.value:
           # cresce para direita 
-          autal.value = atual.dir
+          autal = atual.dir
           if atual == None:
             # coloca no na direita
             root.dir = node
-        return root
+        return i
 
-             
-
-#   def _remove(self, value, node):
-#     if value < node.value:
-#       node.left = self._remove(value, node.left)
-#     elif value > node.value:
-#       node.right = self._remove(value, node.right)
-#     else:
-#       if node.left is None:
-#         return node.right
-#       elif node.right is None:
-#         return node.left
-#       else:
-#         def _menorFolha(node=None):
-#           while node.left:
-#             node = node.left
-#           return node.value
-#         organize = _menorFolha(node.right)
-#         node.data = organize
-#         node.right = self._remove(organize, node.right)
-#     return node
-  
-#   def buscar(self, value):
-#     if self.root == None:
-#       return None
-#     atual = self.root # começa a procurar desde raiz
-#     while atual.item != value: # enquanto nao encontrou
-#       if value < atual.item:
-#         atual = atual.esq # caminha para esquerda
-#       else:
-#         atual = atual.dir # caminha para direita
-#         if atual == None:
-#           return None # encontrou uma folha -> sai
-#       return atual  # terminou o laço while e chegou aqui é pq encontrou item   
-# # posordem
-#   def imprimir(self,root):
-#     self.root = root
-#     if root != None:
-#      self.imprimir(root.esquerda)
-#      self.imprimir(root.direita)
-#      pend="")print(root.value,
-    
-#     return
+  def buscar(self,value):
+    if self.root == None:
+      return None
+      # se arvore vazia 
+    atual=self.root
+    # enquanto não encontrar 
+    while atual.value != value:
+      if value < atual.value:
+        atual = atual.esq
+      else:
+        atual = atual.dir 
+      if atual == None:
+        return None
+      return atual
